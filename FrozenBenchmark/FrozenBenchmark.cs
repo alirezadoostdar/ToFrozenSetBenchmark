@@ -10,41 +10,65 @@ using System.Threading.Tasks;
 namespace FrozenSetBenchmark
 {
 
+    //[MemoryDiagnoser]
+    //public class FrozenBenchmark
+    //{
+    //    private const int Iterations = 1000;
+    //    private readonly List<int> list = Enumerable.Range(0, Iterations).ToList();
+    //    private readonly HashSet<int> hashSet = Enumerable.Range(0, Iterations).ToHashSet();
+    //    private readonly ImmutableHashSet<int> immutableHashSet = Enumerable.Range(0, Iterations).ToImmutableHashSet();
+    //    private readonly FrozenSet<int> frozenSet = Enumerable.Range(0, Iterations).ToFrozenSet();
+
+    //    [Benchmark]
+    //    public void LookupFrozen()
+    //    {
+    //        for (int i = 0; i < Iterations; i++)
+    //            _ = frozenSet.Contains(i);
+    //    }
+
+    //    [Benchmark(Baseline = true)]
+    //    public void LookupList()
+    //    {
+    //        for (int i = 0; i < Iterations; i++)
+    //            _ = list.Contains(i);
+    //    }
+
+    //    [Benchmark]
+    //    public void LookupHashSet()
+    //    {
+    //        for (int i = 0; i < Iterations; i++)
+    //            _ = hashSet.Contains(i);
+    //    }
+
+    //    [Benchmark]
+    //    public void LookupImmutableHashSet()
+    //    {
+    //        for (int i = 0; i < Iterations; i++)
+    //            _ = immutableHashSet.Contains(i);
+    //    }
+    //}
+
+
     [MemoryDiagnoser]
     public class FrozenBenchmark
     {
-        private const int Iterations = 1000;
-        private readonly List<int> list = Enumerable.Range(0, Iterations).ToList();
-        private readonly HashSet<int> hashSet = Enumerable.Range(0, Iterations).ToHashSet();
-        private readonly ImmutableHashSet<int> immutableHashSet = Enumerable.Range(0, Iterations).ToImmutableHashSet();
-        private readonly FrozenSet<int> frozenSet = Enumerable.Range(0, Iterations).ToFrozenSet();
+        private readonly int[] from = Enumerable.Range(0,1000).ToArray();
 
         [Benchmark]
-        public void LookupFrozen()
+        public FrozenSet<int> CreateFrozenList()
         {
-            for (int i = 0; i < Iterations; i++)
-                _ = frozenSet.Contains(i);
+            int[] from=Enumerable.Range(0,1000).ToArray();
+            return from.ToFrozenSet();
         }
+
 
         [Benchmark(Baseline = true)]
-        public void LookupList()
-        {
-            for (int i = 0; i < Iterations; i++)
-                _ = list.Contains(i);
-        }
+        public void CreateList() => from.ToList();
 
         [Benchmark]
-        public void LookupHashSet()
-        {
-            for (int i = 0; i < Iterations; i++)
-                _ = hashSet.Contains(i);
-        }
+        public void CreateHashSet() => from.ToHashSet();
 
         [Benchmark]
-        public void LookupImmutableHashSet()
-        {
-            for (int i = 0; i < Iterations; i++)
-                _ = immutableHashSet.Contains(i);
-        }
+        public void CreateImmutableHashSet() => from.ToImmutableHashSet();
     }
 }

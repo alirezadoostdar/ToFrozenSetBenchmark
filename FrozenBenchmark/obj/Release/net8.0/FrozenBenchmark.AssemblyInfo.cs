@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FrozenBenchmark")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9299042f2e03643ae6f6b4e66e73a31f0649dc38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10e9dc9b8863730dbbad05e648f02946f76f73ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("FrozenBenchmark")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FrozenBenchmark")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>FrozenSetBenchmark.FrozenBenchmark-14030428-123238</title>
+<title>FrozenSetBenchmark.FrozenBenchmark-14030428-125246</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,12 +22,12 @@ Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical co
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method          </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th><th>Allocated</th><th>Alloc Ratio</th>
+<thead><tr><th>Method          </th><th>Mean  </th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Gen0</th><th>Allocated</th><th>Alloc Ratio</th>
 </tr>
-</thead><tbody><tr><td>LookupFrozen</td><td>2.608 &mu;s</td><td>0.0368 &mu;s</td><td>0.0345 &mu;s</td><td>0.04</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>LookupList</td><td>62.566 &mu;s</td><td>1.2418 &mu;s</td><td>1.7409 &mu;s</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>LookupHashSet</td><td>5.784 &mu;s</td><td>0.0789 &mu;s</td><td>0.0738 &mu;s</td><td>0.09</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>LookupImmutableHashSet</td><td>39.017 &mu;s</td><td>0.7770 &mu;s</td><td>1.8467 &mu;s</td><td>0.61</td><td>0.02</td><td>-</td><td>NA</td>
+</thead><tbody><tr><td>CreateFrozenList</td><td>24,950.8 ns</td><td>415.23 ns</td><td>682.24 ns</td><td>24,744.7 ns</td><td>60.59</td><td>5.00</td><td>14.1602</td><td>43.59 KB</td><td>11.00</td>
+</tr><tr><td>CreateList</td><td>412.4 ns</td><td>9.95 ns</td><td>29.18 ns</td><td>400.3 ns</td><td>1.00</td><td>0.00</td><td>1.2918</td><td>3.96 KB</td><td>1.00</td>
+</tr><tr><td>CreateHashSet</td><td>9,860.3 ns</td><td>175.85 ns</td><td>330.30 ns</td><td>9,736.1 ns</td><td>23.76</td><td>2.12</td><td>5.6458</td><td>17.38 KB</td><td>4.39</td>
+</tr><tr><td>CreateImmutableHashSet</td><td>137,298.8 ns</td><td>987.41 ns</td><td>824.53 ns</td><td>136,991.3 ns</td><td>347.28</td><td>17.48</td><td>17.8223</td><td>54.77 KB</td><td>13.83</td>
 </tr></tbody></table>
 </body>
 </html>
